@@ -20,7 +20,7 @@ jobs:
         with:
           command: cp
           source: ./dist/index.html
-          destination: s3:/sara-manu-bucket-bucket/index.html
+          destination: s3:/sara-manu-bucket/index.html
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: us-east-1
@@ -32,7 +32,7 @@ jobs:
         with:
           command: cp
           source: ./dist/assets/
-          destination: s3://sara-manu-bucket-bucket/assets/
+          destination: s3://sara-manu-bucket/assets/
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: us-east-1
