@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: #702321;
+  line-height: 10vw;
+  font-size: 10vw;
+  font-weight: normal;
+  margin-bottom: 2vw;
+}
+.eventTable {
+  width: 80%;
+  border-collapse: collapse; /* Optional: for cleaner table borders */
+}
+.eventTable td {
+  padding: 1vw;
+}
+
+.eventTable td:first-child,
+.eventTable td:last-child {
+  width: 40%;
+}
+
+.eventTable td:first-child {
+  text-align: right;
+}
+.eventTable td:last-child {
+  text-align: left;
+}
+.eventTable td:nth-child(2) {
+  width: 20%;
+  text-align: center;
+}
+.subTitle {
+  color: #702321;
+  font-size: 3vw;
+  line-height: 3vw;
+  font-weight: normal;
+}
+.subSubTitle {
+  margin-top: 1vw;
+  color: #702321;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  font-weight: normal;
+}

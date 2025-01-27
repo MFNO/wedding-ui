@@ -1,6 +1,6 @@
-import wedding from '../images/wedding.png';
-import styles from './Wedding.module.css';
-export default function Wedding() {
+import rsvp from '../images/rsvp.png';
+import styles from './Rsvp.module.css';
+export default function std() {
   return (
     <div
       style={{
@@ -15,7 +15,7 @@ export default function Wedding() {
           maxHeight: '90vh',
           objectFit: 'contain',
         }}
-        src={wedding}
+        src={rsvp}
       />
       <button className={styles.addCalendarBtn}>
         <i className="fas fa-calendar-alt"></i>
