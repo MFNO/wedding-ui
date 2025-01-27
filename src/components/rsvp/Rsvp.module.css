@@ -67,6 +67,8 @@ input:hover {
 
 @media (max-width: 1800px) {
   .text {
+    margin-top: 2vw;
+    margin-bottom: 4vw;
     font-size: 5vw;
     line-height: 5vw;
   }
@@ -76,5 +78,8 @@ input:hover {
   }
   label {
     font-size: 3vw;
+  }
+  .form {
+    margin-top: 10vw;
   }
 }
