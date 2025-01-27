@@ -4,10 +4,10 @@ import line from '../../images/line.png';
 
 export default function Rsvp() {
   const [formData, setFormData] = useState({
-    partyType: '', // Radio button value
+    attending: true,
     names: [''], // Array of names based on the number of guests
-    numberOfGuests: 1, // Number input value
-    dietaryRestrictions: '', // Text input value
+    guestCount: 1, // Number input value
+    dietaryInformation: '', // Text input value
   });
 
   console.log(formData);
@@ -29,7 +29,7 @@ export default function Rsvp() {
   ) => {
     setFormData({
       ...formData,
-      dietaryRestrictions: e.target.value,
+      dietaryInformation: e.target.value,
     });
   };
 
@@ -40,7 +40,7 @@ export default function Rsvp() {
     const newNames = new Array(newNumberOfGuests).fill('');
     setFormData({
       ...formData,
-      numberOfGuests: newNumberOfGuests,
+      guestCount: newNumberOfGuests,
       names: newNames,
     });
   };
@@ -49,7 +49,7 @@ export default function Rsvp() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://api.example.com/submit-party', {
+      const response = await fetch('https://www.manuapi.zawaco.be/rsvps', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,6 +66,13 @@ export default function Rsvp() {
       console.error(err);
       alert('Something went wrong. Please try again.');
     }
+  };
+
+  const handleAttendingChange = (isAttending: boolean) => {
+    setFormData({
+      ...formData,
+      attending: isAttending,
+    });
   };
 
   return (
@@ -126,7 +133,7 @@ export default function Rsvp() {
               onChange={handleDietaryRestrictionsChange}
               name="dietaryRestrictions"
               type="text"
-              value={formData.dietaryRestrictions}
+              value={formData.dietaryInformation}
             />
           </div>
           <div
@@ -142,6 +149,7 @@ export default function Rsvp() {
             <button
               className={rsvpStyles.button}
               type="submit"
+              onClick={() => handleAttendingChange(true)}
               disabled={
                 formData.names.length === 0 ||
                 formData.names.some((name) => name.length === 0)
@@ -152,6 +160,7 @@ export default function Rsvp() {
             <button
               className={rsvpStyles.button}
               type="submit"
+              onClick={() => handleAttendingChange(false)}
               disabled={
                 formData.names.length === 0 ||
                 formData.names.some((name) => name.length === 0)
