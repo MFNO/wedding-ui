@@ -15,6 +15,13 @@
 .text {
   text-transform: none;
   color: #efc8d4;
+  font-size: 3vw;
+  line-height: 3vw;
+}
+.subText {
+  color: #efc8d4;
+  font-size: 2vw;
+  line-height: 2vw;
 }
 .form {
   display: flex;
@@ -56,4 +63,18 @@ input:hover {
   cursor: not-allowed;
   background-color: rgb(61, 61, 61);
   color: rgb(89, 87, 87);
+}
+
+@media (max-width: 1800px) {
+  .text {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+  .subText {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+  label {
+    font-size: 3vw;
+  }
 }

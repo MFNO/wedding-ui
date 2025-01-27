@@ -49,7 +49,7 @@ export default function Events() {
               </p>
             </td>
             <td>
-              <p className={eventStyles.subTitle}>7:30</p>
+              <p className={eventStyles.subTitle}>9:30</p>
             </td>
             <td>
               <p className={eventStyles.subTitle}>Dansfeest</p>

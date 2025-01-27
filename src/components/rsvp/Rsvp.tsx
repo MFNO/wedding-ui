@@ -71,23 +71,10 @@ export default function Rsvp() {
   return (
     <div className={rsvpStyles.container}>
       <h1 className={rsvpStyles.title}>RSVP</h1>
-      <p
-        className={rsvpStyles.text}
-        style={{
-          fontSize: '3vw',
-          lineHeight: '3vw',
-          marginBottom: '1vw',
-        }}
-      >
+      <p className={rsvpStyles.text}>
         Please RSVP no later than March 21, 2025
       </p>
-      <p
-        className={rsvpStyles.text}
-        style={{
-          fontSize: '2vw',
-          lineHeight: '2vw',
-        }}
-      >
+      <p className={rsvpStyles.subText}>
         Graag uiterlijk tegen 21 maart 2025 reageren
       </p>
       <img
@@ -98,25 +85,8 @@ export default function Rsvp() {
         }}
         src={line}
       />
-      <p
-        className={rsvpStyles.text}
-        style={{
-          fontSize: '3vw',
-          lineHeight: '3vw',
-          marginBottom: '1vw',
-        }}
-      >
-        Enter each member of your party below
-      </p>
-      <p
-        className={rsvpStyles.text}
-        style={{
-          fontSize: '2vw',
-          lineHeight: '2vw',
-        }}
-      >
-        Geef alle genodigend onderstaad in
-      </p>
+      <p className={rsvpStyles.text}>Enter each member of your party below</p>
+      <p className={rsvpStyles.subText}>Geef alle genodigend onderstaad in</p>
       <div className={rsvpStyles.form}>
         <form onSubmit={handleSubmit}>
           <div
@@ -127,13 +97,11 @@ export default function Rsvp() {
               marginTop: '1vw',
             }}
           >
-            <label>Number of guests</label>
+            <label>Number of Guests</label>
             <input
               onChange={handleNumberOfGuestsChange}
               name="numberOfGuests"
               type="number"
-              min="1"
-              value={formData.numberOfGuests}
             />
             {formData.names.map((name, index) => (
               <div
@@ -167,14 +135,16 @@ export default function Rsvp() {
               flexDirection: 'row',
               gap: '1vw',
               marginBottom: '200vw',
+              width: '100%',
+              justifyContent: 'center',
             }}
           >
             <button
               className={rsvpStyles.button}
               type="submit"
               disabled={
-                formData.names.some((name) => name.length === 0) ||
-                !formData.dietaryRestrictions
+                formData.names.length === 0 ||
+                formData.names.some((name) => name.length === 0)
               }
             >
               Gladly Accept
@@ -183,8 +153,8 @@ export default function Rsvp() {
               className={rsvpStyles.button}
               type="submit"
               disabled={
-                formData.names.some((name) => name.length === 0) ||
-                !formData.dietaryRestrictions
+                formData.names.length === 0 ||
+                formData.names.some((name) => name.length === 0)
               }
             >
               Regretfully Decline

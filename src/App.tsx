@@ -12,7 +12,7 @@ import Location from './components/location/Location';
 import Events from './components/events/Events';
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   console.log(window.location.pathname.split('/'));
   // Conditionally set the image source based on the route
   const menuIconSrc = menuOpen
@@ -43,6 +43,11 @@ function App() {
                 className={styles.menuList}
               >
                 <li>
+                  <Link to="/home" className={styles.menuItem}>
+                    Home
+                  </Link>
+                </li>
+                <li>
                   <Link to="/location" className={styles.menuItem}>
                     Location
                   </Link>
@@ -68,6 +73,7 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<Wedding />} />
+          <Route path="/home" element={<Wedding />} />
           <Route path="/location" element={<Location />} />
           <Route path="/events" element={<Events />} />
           <Route path="/travel" element={<Wedding />} />
