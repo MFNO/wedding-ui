@@ -68,6 +68,7 @@ function App() {
                     RSVP
                   </Link>
                 </li>
+                <li className={styles.date}>28 June 2025</li>
               </ul>
             </div>
           ) : null}

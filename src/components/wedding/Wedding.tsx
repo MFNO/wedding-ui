@@ -18,6 +18,7 @@ export default function Wedding() {
           }}
         >
           <p className={styles.text}>Married</p>
+
           <img
             style={{
               width: '3vh',
