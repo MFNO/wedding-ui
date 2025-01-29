@@ -76,101 +76,136 @@ export default function Rsvp() {
   };
 
   return (
-    <div className={rsvpStyles.container}>
-      <h1 className={rsvpStyles.title}>RSVP</h1>
-      <p className={rsvpStyles.text}>
-        Please RSVP no later than March 21, 2025
-      </p>
-      <p className={rsvpStyles.subText}>
-        Graag uiterlijk tegen 21 maart 2025 reageren
-      </p>
-      <img
-        style={{
-          width: '40%',
-          marginTop: '2vw',
-          marginBottom: '2vw',
-        }}
-        src={line}
-      />
-      <p className={rsvpStyles.text}>Enter each member of your party below</p>
-      <p className={rsvpStyles.subText}>Geef alle genodigend onderstaad in</p>
-      <div className={rsvpStyles.form}>
-        <form onSubmit={handleSubmit}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1vw',
-              marginTop: '1vw',
-            }}
-          >
-            <label>Number of Guests</label>
-            <input
-              onChange={handleNumberOfGuestsChange}
-              name="numberOfGuests"
-              type="number"
-            />
-            {formData.names.map((name, index) => (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '1vw',
-                }}
-                key={index}
+    <>
+      {' '}
+      <div className={rsvpStyles.container}>
+        <h1 className={rsvpStyles.title}>RSVP</h1>
+        <p className={rsvpStyles.text}>
+          Please RSVP no later than March 21, 2025
+        </p>
+        <p className={rsvpStyles.subText}>
+          Graag uiterlijk tegen 21 maart 2025 reageren
+        </p>
+        <img
+          style={{
+            width: '40%',
+            marginTop: '2vw',
+            marginBottom: '2vw',
+          }}
+          src={line}
+        />
+        <p className={rsvpStyles.text}>Enter each member of your party below</p>
+        <p className={rsvpStyles.subText}>Geef alle genodigend onderstaad in</p>
+        <div className={rsvpStyles.form}>
+          <form onSubmit={handleSubmit}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1vw',
+                marginTop: '1vw',
+              }}
+            >
+              <label>Number of Guests</label>
+              <input
+                onChange={handleNumberOfGuestsChange}
+                name="numberOfGuests"
+                type="number"
+              />
+              {formData.names.map((name, index) => (
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '1vw',
+                  }}
+                  key={index}
+                >
+                  <label>Full Name for Guest {index + 1}</label>
+                  <input
+                    onChange={(e) => handleChangeName(e, index)}
+                    name={`name-${index}`}
+                    type="text"
+                    value={name}
+                  />
+                </div>
+              ))}
+              <label>Dietary Restrictions or Additional Requests</label>
+              <input
+                onChange={handleDietaryRestrictionsChange}
+                name="dietaryRestrictions"
+                type="text"
+                value={formData.dietaryInformation}
+              />
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                gap: '1vw',
+                width: '100%',
+                justifyContent: 'center',
+              }}
+            >
+              <button
+                className={rsvpStyles.button}
+                type="submit"
+                onClick={() => handleAttendingChange(true)}
+                disabled={
+                  formData.names.length === 0 ||
+                  formData.names.some((name) => name.length === 0)
+                }
               >
-                <label>Full Name for Guest {index + 1}</label>
-                <input
-                  onChange={(e) => handleChangeName(e, index)}
-                  name={`name-${index}`}
-                  type="text"
-                  value={name}
-                />
-              </div>
-            ))}
-            <label>Dietary Restrictions or Additional Requests</label>
-            <input
-              onChange={handleDietaryRestrictionsChange}
-              name="dietaryRestrictions"
-              type="text"
-              value={formData.dietaryInformation}
-            />
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: '1vw',
-              marginBottom: '200vw',
-              width: '100%',
-              justifyContent: 'center',
-            }}
-          >
-            <button
-              className={rsvpStyles.button}
-              type="submit"
-              onClick={() => handleAttendingChange(true)}
-              disabled={
-                formData.names.length === 0 ||
-                formData.names.some((name) => name.length === 0)
-              }
-            >
-              Gladly Accept
-            </button>
-            <button
-              className={rsvpStyles.button}
-              type="submit"
-              onClick={() => handleAttendingChange(false)}
-              disabled={
-                formData.names.length === 0 ||
-                formData.names.some((name) => name.length === 0)
-              }
-            >
-              Regretfully Decline
-            </button>
-          </div>
-        </form>
+                Gladly Accept
+              </button>
+              <button
+                className={rsvpStyles.button}
+                type="submit"
+                onClick={() => handleAttendingChange(false)}
+                disabled={
+                  formData.names.length === 0 ||
+                  formData.names.some((name) => name.length === 0)
+                }
+              >
+                Regretfully Decline
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+      <div className={rsvpStyles.gift}>
+        <div
+          style={{
+            width: '80%',
+          }}
+        >
+          <p className={rsvpStyles.text}>Gifts </p>
+          <p className={rsvpStyles.subText}>
+            Many of you are traveling across the globe to celebrate with us in
+            Belgium, so your presence means the world for us and is all we ask
+            for.
+          </p>
+          <p className={rsvpStyles.subText}>
+            If you'd still like to contribute to our honeymoon fund, please use
+            the information below.
+          </p>
+          <p className={rsvpStyles.subText}>Manu Fourneau</p>
+
+          <p className={rsvpStyles.subText}>BE63 0636 8069 4808</p>
+          <p className={rsvpStyles.subText}>
+            <a
+              style={{
+                color: 'white',
+              }}
+              href="https://venmo.com/u/manufourneau"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Venmo
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
