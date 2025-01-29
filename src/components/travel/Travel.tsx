@@ -9,7 +9,7 @@ export default function Travel() {
         <p className={eventStyles.text}>
           The main airport in Belgium is Brussels (<strong>BRU</strong>). If you
           are flying in directly before the wedding, we recommend arriving on
-          the 26th. Keep in mind that there is a +8 hour difference in the US
+          the 26th. Keep in mind that there is a +6 hour difference in the US
           East Coast timezone.
         </p>
         <p className={eventStyles.text}>
@@ -41,13 +41,20 @@ export default function Travel() {
         <h2 className={eventStyles.subTitle}>Via Paris</h2>
         <p className={eventStyles.text}>
           Depending on your origin city, it is often cheaper to fly into Paris
-          (Charles De Gaulle airport). From the CDG airport, you can board a
-          high speed train to Brussels (the capital), where you make one train
-          changeover to Ghent. The total cost for this is about 70€, and the
-          trip takes 2.5 hours. This combination of trains only runs a couple
-          times a day, so please check your arrival time and give yourself
-          plenty of wiggle room. Find more details about this trip and book both
-          tickets together on RailEurope.com
+          (Charles De Gaulle airport). From the <strong>CDG</strong> airport,
+          you can board a high speed train to Brussels (the capital), where you
+          make one train changeover to Ghent. The total cost for this is about
+          70€, and the trip takes 2.5 hours. This combination of trains only
+          runs a couple of times a day, so please check your arrival time and
+          give yourself plenty of wiggle room. Find more details about this trip
+          and book both tickets together on{' '}
+          <a
+            href="https://www.raileurope.com/en-us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RailEurope.com
+          </a>
         </p>
       </div>
       <div className={eventStyles.boldContainer}>
@@ -56,8 +63,9 @@ export default function Travel() {
           Dampoort
         </p>
       </div>
-      <h1 className={eventStyles.title}>Traveling in Ghent</h1>
       <div className={eventStyles.paragraphContainer}>
+        <h2 className={eventStyles.subTitle}>Travel in Ghent</h2>
+
         <p className={eventStyles.text}>
           Ghent, Belgium, is a charming city that blends medieval history with
           modern atmosphere. Known for its picturesque canals, historic
@@ -89,8 +97,9 @@ export default function Travel() {
           Stay tuned for a list of our favorite spots!
         </p>
       </div>
-      <h1 className={eventStyles.title}>Accommodation</h1>
       <div className={eventStyles.paragraphContainer}>
+        <h2 className={eventStyles.subTitle}>Accommodation</h2>
+
         <p className={eventStyles.text}>
           There are many hotels, hostels, Airbnb’s to choose from in Gent. The
           tram only runs to 2AM, so if you plan on staying at the wedding late

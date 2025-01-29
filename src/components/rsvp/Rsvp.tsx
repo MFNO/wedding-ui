@@ -95,7 +95,7 @@ export default function Rsvp() {
           src={line}
         />
         <p className={rsvpStyles.text}>Enter each member of your party below</p>
-        <p className={rsvpStyles.subText}>Geef alle genodigend onderstaad in</p>
+        <p className={rsvpStyles.subText}>Geef alle genodigden onderstaad in</p>
         <div className={rsvpStyles.form}>
           <form onSubmit={handleSubmit}>
             <div
