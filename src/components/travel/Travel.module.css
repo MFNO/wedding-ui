@@ -5,18 +5,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 7vh;
 }
 .title,
 .topTitle {
   color: #702321;
-  line-height: 4vw;
-  font-size: 4vw;
+  line-height: 10vw;
+  font-size: 10vw;
   font-weight: normal;
-  margin-bottom: 3vw;
-}
-.topTitle {
-  margin-bottom: 10vw;
 }
 .paragraphContainer {
   margin: 0;
@@ -52,8 +47,7 @@
 }
 
 @media (max-width: 1800px) {
-  .title,
-  .topTitle {
+  .title {
     font-size: 3vh;
     line-height: 3h;
   }
@@ -64,7 +58,7 @@
   .text,
   .boldText {
     font-size: 2vh;
-    line-height: 2vh;
+    line-height: 3vh;
     margin-bottom: 2vh;
   }
 }

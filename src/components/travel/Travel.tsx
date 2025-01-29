@@ -3,7 +3,7 @@ import eventStyles from './Travel.module.css';
 export default function Travel() {
   return (
     <div className={eventStyles.container}>
-      <h1 className={eventStyles.topTitle}>Traveling To Belgium</h1>
+      <h1 className={eventStyles.topTitle}>Travel</h1>
       <div className={eventStyles.paragraphContainer}>
         <h2 className={eventStyles.subTitle}>Via Brussels</h2>
         <p className={eventStyles.text}>
@@ -95,7 +95,8 @@ export default function Travel() {
           There are many hotels, hostels, Airbnb’s to choose from in Gent. The
           tram only runs to 2AM, so if you plan on staying at the wedding late
           or don’t have a designated driver, we would recommend finding
-          accommodation walking distance from the venue.
+          accommodation walking distance from the venue, as ridesharing apps can
+          be a bit inconsistent.
         </p>
         <p className={eventStyles.text}>
           Two options that are less than a 10 minute walk:
