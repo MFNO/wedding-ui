@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import rsvpStyles from './Rsvp.module.css';
 import line from '../../images/line.png';
+import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Don't forget to import the CSS
 
 export default function Rsvp() {
   const [formData, setFormData] = useState({
@@ -44,7 +47,6 @@ export default function Rsvp() {
       names: newNames,
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -61,10 +63,10 @@ export default function Rsvp() {
         throw new Error('Failed to submit form');
       }
 
-      alert('Form submitted successfully!');
+      toast.success('Form submitted successfully!');
     } catch (err) {
       console.error(err);
-      alert('Something went wrong. Please try again.');
+      toast.error('Something went wrong. Please try again.');
     }
   };
 
@@ -207,6 +209,7 @@ export default function Rsvp() {
             </a>
           </p>
         </div>
+        <ToastContainer />
       </div>
     </>
   );
