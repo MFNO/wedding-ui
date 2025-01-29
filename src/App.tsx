@@ -10,6 +10,7 @@ import { useState } from 'react';
 import Rsvp from './components/rsvp/Rsvp';
 import Location from './components/location/Location';
 import Events from './components/events/Events';
+import Travel from './components/travel/Travel';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -76,7 +77,7 @@ function App() {
           <Route path="/home" element={<Wedding />} />
           <Route path="/location" element={<Location />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/travel" element={<Wedding />} />
+          <Route path="/travel" element={<Travel />} />
           <Route path="/rsvp" element={<Rsvp />} />
         </Routes>
       </div>

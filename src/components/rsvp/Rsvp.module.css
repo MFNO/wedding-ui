@@ -82,4 +82,7 @@ input:hover {
   .form {
     margin-top: 10vw;
   }
+  .title {
+    margin-bottom: 10vh;
+  }
 }
