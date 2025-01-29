@@ -68,6 +68,12 @@ export default function Rsvp() {
       console.error(err);
       toast.error('Something went wrong. Please try again.');
     }
+    setFormData({
+      attending: true,
+      names: [''],
+      guestCount: 1,
+      dietaryInformation: '',
+    });
   };
 
   const handleAttendingChange = (isAttending: boolean) => {
@@ -75,6 +81,12 @@ export default function Rsvp() {
       ...formData,
       attending: isAttending,
     });
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevent the default action (form submit) when Enter is pressed
+    }
   };
 
   return (
@@ -101,7 +113,10 @@ export default function Rsvp() {
           Geef alle genodigden onderstaand in
         </p>
         <div className={rsvpStyles.form}>
-          <form onSubmit={handleSubmit}>
+          <form
+            onKeyDown={handleKeyDown} // Prevent the Enter key press from submitting the form
+            onSubmit={handleSubmit}
+          >
             <div
               style={{
                 display: 'flex',
