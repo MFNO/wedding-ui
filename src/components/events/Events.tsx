@@ -35,9 +35,7 @@ export default function Events() {
             </td>
             <td>
               <p className={eventStyles.subTitle}>Diner</p>
-              <p className={eventStyles.subSubTitle}>
-                Avond diner met bediening
-              </p>
+              <p className={eventStyles.subSubTitle}>Avond diner</p>
             </td>
           </tr>
           <tr>
