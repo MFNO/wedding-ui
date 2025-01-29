@@ -29,9 +29,13 @@ img {
 
 @media (max-width: 600px) {
   .dataAndPhoto {
-    scale: 2.2;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .dataAndPhoto img {
+    object-fit: cover;
   }
   .announcement {
-    height: 60vh;
+    height: 50vh;
   }
 }
