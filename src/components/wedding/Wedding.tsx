@@ -21,8 +21,8 @@ export default function Wedding() {
 
           <img
             style={{
-              width: '3dvh',
-              height: '3dvh',
+              width: '3svh',
+              height: '3svh',
             }}
             src={thirdpower}
           />

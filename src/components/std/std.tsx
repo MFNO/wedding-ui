@@ -12,7 +12,7 @@ export default function std() {
       <img
         style={{
           maxWidth: '90vw',
-          maxHeight: '90dvh',
+          maxHeight: '90svh',
           objectFit: 'contain',
         }}
         src={rsvp}
