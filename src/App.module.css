@@ -27,7 +27,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 150vh;
+  height: 150dvh;
   right: 0;
   top: 0;
   z-index: 2;

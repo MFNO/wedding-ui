@@ -76,8 +76,8 @@ input:hover {
   align-items: center;
   justify-content: center;
   background-color: #702321;
-  padding-top: 3vh;
-  padding-bottom: 100vh;
+  padding-top: 3dvh;
+  padding-bottom: 100dvh;
 }
 @media (max-width: 1800px) {
   .text {
@@ -95,6 +95,6 @@ input:hover {
     margin-top: 10vw;
   }
   .title {
-    margin-bottom: 10vh;
+    margin-bottom: 10dvh;
   }
 }

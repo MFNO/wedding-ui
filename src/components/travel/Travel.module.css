@@ -48,17 +48,17 @@
 
 @media (max-width: 1800px) {
   .title {
-    font-size: 3vh;
+    font-size: 3dvh;
     line-height: 3h;
   }
   .subTitle {
-    font-size: 3vh;
+    font-size: 3dvh;
     line-height: 3h;
   }
   .text,
   .boldText {
-    font-size: 2vh;
-    line-height: 3vh;
-    margin-bottom: 2vh;
+    font-size: 2dvh;
+    line-height: 3dvh;
+    margin-bottom: 2dvh;
   }
 }

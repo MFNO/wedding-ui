@@ -40,15 +40,15 @@
 }
 .subTitle {
   color: #702321;
-  font-size: 2vh;
-  line-height: 2vh;
+  font-size: 2dvh;
+  line-height: 2dvh;
   font-weight: normal;
 }
 .subSubTitle {
   margin-top: 1vw;
   color: #702321;
-  font-size: 1.5vh;
-  line-height: 1.5vh;
+  font-size: 1.5dvh;
+  line-height: 1.5dvh;
   font-weight: normal;
 }
 

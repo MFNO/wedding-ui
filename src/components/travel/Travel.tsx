@@ -34,7 +34,7 @@ export default function Travel() {
       </div>
       <div className={eventStyles.boldContainer}>
         <p className={eventStyles.boldText}>
-          Brussels Zavantem → Gent St. Pieters or Gent Dampoort
+          Brussels Zaventem → Gent St. Pieters or Gent Dampoort
         </p>
       </div>
       <div className={eventStyles.paragraphContainer}>
